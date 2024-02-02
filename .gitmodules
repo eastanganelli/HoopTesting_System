@@ -1,0 +1,9 @@
+[submodule "HoopTesting_Emulator"]
+	path = HoopTesting_Emulator
+	url = https://github.com/eastanganelli/HoopTesting_Emulator.git
+[submodule "HoopTesting_DataCollector"]
+	path = HoopTesting_DataCollector
+	url = https://github.com/eastanganelli/HoopTesting_DataCollector.git
+[submodule "HoopTesting_Database"]
+	path = HoopTesting_Database
+	url = https://github.com/eastanganelli/HoopTesting_Database.git
