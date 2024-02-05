@@ -7,3 +7,6 @@
 [submodule "HoopTesting_Database"]
 	path = HoopTesting_Database
 	url = https://github.com/eastanganelli/HoopTesting_Database.git
+[submodule "HoopTesting_ReportGenerator"]
+	path = HoopTesting_ReportGenerator
+	url = https://github.com/eastanganelli/HoopTesting_ReportGenerator.git
