@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Hoop Testing System"
-#define MyAppVersion "1.0"
+#define MyAppVersion "1.0.2"
 #define MyAppPublisher "Ezequiel Augusto Stanganelli"
 #define MyAppURL "https://github.com/eastanganelli/HoopTesting_System"
 
@@ -20,10 +20,10 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-LicenseFile=D:\ezequ\Projects\HoopTesting_System\Installer_Config\license.txt
+LicenseFile=D:\ezequ\Projects\HoopTesting_System\sources\Installer_Config\license.txt
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
-OutputDir=D:\ezequ\Projects\HoopTesting_System\Installers
+OutputDir=D:\ezequ\Projects\HoopTesting_System\sources\Installers
 OutputBaseFilename=HoopTesting_System
 SetupIconFile=D:\ezequ\Projects\HoopTesting_System\sources\icons\System\icon.ico
 Compression=lzma
@@ -34,14 +34,14 @@ WizardStyle=modern
 Name: "spanish"; MessagesFile: "compiler:Languages\Spanish.isl"
 
 [Files]
-Source: "D:\ezequ\Projects\HoopTesting_System\installer folder\Colector de Datos\*"; DestDir: "{app}\DataCollector"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "D:\ezequ\Projects\HoopTesting_System\installer folder\Database Manager\*"; DestDir: "{app}\DatabaseManager"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "D:\ezequ\Projects\HoopTesting_System\installer folder\Report_Generator\*"; DestDir: "{app}\ReportGenerator"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "D:\ezequ\Projects\HoopTesting_System\sources\Installers\DataCollector\*";   DestDir: "{app}\DataCollector";   Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "D:\ezequ\Projects\HoopTesting_System\sources\Installers\DatabaseManager\*"; DestDir: "{app}\DatabaseManager"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "D:\ezequ\Projects\HoopTesting_System\sources\Installers\ReportGenerator\*"; DestDir: "{app}\ReportGenerator"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
-Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
-Name: "{group}\Colector de Datos"; Filename: "{app}\DataCollector\Hoop Testing - Colector de Datos.exe"
-Name: "{group}\Administrador de Base de Datos"; Filename: "{app}\DatabaseManager\Hoop Testing - Database Manager.exe"
-Name: "{group}\Generador de Reportes"; Filename: "{app}\ReportGenerator\Hoop Testing - Report Generator.exe"
+Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; 					 Filename: "{uninstallexe}"
+Name: "{group}\Hoop Testing - Colector de Datos";   					 Filename: "{app}\DataCollector\DataCollector.exe"
+Name: "{group}\Hoop Testing - Administrador de Base de Datos"; Filename: "{app}\DatabaseManager\DatabaseManager.exe"
+Name: "{group}\Hoop Testing - Generador de Reportes"; 				 Filename: "{app}\ReportGenerator\ReportGenerator.exe"
 
