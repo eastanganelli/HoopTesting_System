@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Hoop Testing System"
-#define MyAppVersion "1.0.2"
+#define MyAppVersion "1.0.5"
 #define MyAppPublisher "Ezequiel Augusto Stanganelli"
 #define MyAppURL "https://github.com/eastanganelli/HoopTesting_System"
 
