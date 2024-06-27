@@ -4,11 +4,12 @@ import zipfile
 
 basePath: str = "../.."
 basePathInstall: str = "../Installers"
-qtVersion: str = "6_7_1"
-qtMySQLZIP: str = "qsqlmysql.dll_Qt_SQL_driver_6.7.1_MSVC2019_64-bit.zip"
+qtVersion: str = "6_7_2"
+compilerVersion: str = "MSVC2019"
+qtMySQLZIP: str = "qsqlmysql.dll_Qt_SQL_driver_6.7.2_MSVC2019_64-bit.zip"
 
 def dataCollectorConfigure() -> None:
-    pathProject: str = basePath + "/HoopTesting_DataCollector/build/Desktop_Qt_" + qtVersion + "_MSVC2019_64bit-Release"
+    pathProject: str = basePath + "/HoopTesting_DataCollector/build/Desktop_Qt_" + qtVersion + "_" + compilerVersion + "_64bit-Release"
     pathInstall: str = basePathInstall + "/DataCollector"
 
     try:
@@ -25,7 +26,7 @@ def dataCollectorConfigure() -> None:
     os.remove(pathInstall + "/sqldrivers/qsqlmysqld.dll")
 
 def databaseManagerConfigure() -> None:
-    pathProject: str = basePath + "/HoopTesting_DatabaseManager/build/Desktop_Qt_" + qtVersion + "_MSVC2019_64bit-Release"
+    pathProject: str = basePath + "/HoopTesting_DatabaseManager/build/Desktop_Qt_" + qtVersion + "_" + compilerVersion + "_64bit-Release"
     pathInstall: str = basePathInstall + "/DatabaseManager"
 
     try:
