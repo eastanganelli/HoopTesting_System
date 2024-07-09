@@ -42,6 +42,17 @@ def databaseManagerConfigure() -> None:
     os.remove(pathInstall + "/sqldrivers/qsqlite.dll")
     os.remove(pathInstall + "/sqldrivers/qsqlmysqld.dll")
 
+def emulatorConfigure() -> None:
+    pathProject: str = basePath + "/HoopTesting_Emulator/build/Desktop_Qt_" + qtVersion + "_" + compilerVersion + "_64bit-Release/release"
+    pathInstall: str = basePathInstall + "/Emulator"
+
+    try:
+        shutil.rmtree(pathInstall)
+    except:
+        pass
+    os.system("windeployqt.exe --dir " + '"' + pathInstall + '"' + " --no-translations --no-quick-import --compiler-runtime --no-virtualkeyboard  --release " + '"' + pathProject + "/PLC_Emulator.exe" + '"')
+    shutil.copyfile(pathProject + "/PLC_Emulator.exe", pathInstall + "/PLC_Emulator.exe")
+
 def reportGeneratorConfigure() -> None:
     pathProject: str = basePath + "/HoopTesting_ReportGenerator/dist/win-unpacked"
     pathInstall: str = basePathInstall + "/ReportGenerator"
@@ -51,6 +62,7 @@ def reportGeneratorConfigure() -> None:
     except:
         pass
     shutil.copytree(pathProject, pathInstall)
+    shutil.rmtree(pathInstall + "/locales")
 
 if __name__ == "__main__":
     # Data Collector Installer Preparation
@@ -63,6 +75,10 @@ if __name__ == "__main__":
 
     # Report Generator Installer Preparation
     reportGeneratorConfigure()
+    os.system("cls")
+
+    # Report Generator Installer Preparation
+    emulatorConfigure()
 
     os.system("cls")
     print("Finished.....")
