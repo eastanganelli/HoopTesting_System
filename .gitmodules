@@ -1,15 +1,20 @@
 [submodule "HoopTesting_Emulator"]
 	path = HoopTesting_Emulator
 	url = https://github.com/eastanganelli/HoopTesting_Emulator.git
+	branch = main
 [submodule "HoopTesting_DataCollector"]
 	path = HoopTesting_DataCollector
 	url = https://github.com/eastanganelli/HoopTesting_DataCollector.git
+	branch = main
 [submodule "HoopTesting_Database"]
 	path = HoopTesting_Database
 	url = https://github.com/eastanganelli/HoopTesting_Database.git
+	branch = main
 [submodule "HoopTesting_DatabaseManager"]
 	path = HoopTesting_DatabaseManager
 	url = https://github.com/eastanganelli/HoopTesting_DatabaseManager.git
+	branch = main
 [submodule "HoopTesting_ReportGenerator"]
 	path = HoopTesting_ReportGenerator
 	url = https://github.com/eastanganelli/HoopTesting_ReportGenerator.git
+	branch = master
